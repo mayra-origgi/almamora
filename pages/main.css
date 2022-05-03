@@ -11,6 +11,7 @@ body{
    padding: 0;
    border: 0;
   
+  
 
 }
  
@@ -25,14 +26,15 @@ body{
    grid-template-columns: auto;  
    grid-template-rows: 1fr 1fr 1fr;
    width: 100%;
-   max-height:1500px ;
    margin: 15px 15px 15px 15px;
   
   
    } 
 body{
-   background: linear-gradient( #f570c8, rgb(236, 161, 233) ,pink, #f4dff5) no-repeat;
+   background: linear-gradient( #f570c8, #f5b3f3,rgb(242, 192, 248) ,pink, #f4dff5) ;
+   background-repeat: no-repeat;
    background-size: cover;
+  
 }
 .header {
     grid-area : header ; 
@@ -52,12 +54,15 @@ body{
 .header li:hover{
     width: 50px;
     height: 30px;
-    padding-right:200px ;
+   
     font-size: 30px;
 }
 
 .animacion:hover{
    -webkit-filter: grayscale(1);
+
+}
+img:hover{-webkit-filter: grayscale(1);
 
 }
 /*animacion*/
@@ -124,14 +129,8 @@ justify-content: center;
    flex-direction: column;
 }
 
-/*menu de promociones*/
-main div{
-   width: 100%;
-}
-div img{
-  width: 150px;
-  height: 150px;
-}
+
+
 /*menu de contacto*/
 section iframe{
     width: 200px;
@@ -147,47 +146,42 @@ section iframe{
 {
 /*clases similares*/
    .grids{
-       background-size: 100%;
-       width: 99%;
-       height: 100%;
-       max-height: 1000px;
-       margin: 20px 20px 20px 20px;
-   }
-   .header{
-     
-       width: 99%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  }
-   img .logo{
       
-      width: 30px;
-      height: 30px;
-      border: #4d4949 solid 3px;
-  }
-  .header ul{
+      margin: 0;
+      padding: 0;
+      width: 100%;
       display: flex;
+      flex-wrap: wrap;
+    }
+ 
+    .header{  
+      
+      justify-content: space-between;
       flex-direction: row;
-  }
-  .header li{
-      margin:10px;
-  }
+      width: 100%;
+     
+   }
   footer{
-   display: flex;
+   
    align-items: center;
    flex-direction: row;
-   width: 99%;
    justify-content: space-between;
-  }
+  margin-bottom: 0px;
+  align-self: flex-end;
+  width: 100%;
+ }
 
 /*menu*/
-  main{
-   width: 100%;
-   display: flex;
-   text-align: center;
-   flex-direction: column;
+ .bienvenida{
+    border: #4d4949 solid 2px;
+    justify-content: end;
+ }
+   
+#carouselExampleControls{
+   width: 30%;
+ margin-left: 600px;
+}
+
 }
 section .imagen-principal{
    width: 100%;
@@ -203,23 +197,24 @@ section .imagen-principal{
   height: 600px;
 }
 /* servicio*/
-#trabajos-center img{
-   display: flex;
-   width: 300px;
-   height: 300px;
-   flex-direction: column;
-}
-.trabajos-center img{
-   width: 300px;
-  height: 300px;
 
+.boton{
+   text-align: center;
+   padding-top: 100px;
 }
-table{
-   border: solid 3px gray;
-   width: 500px;
-   height: 500px;
-   font-size: 25px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.btn{
+   border-radius: 2px;
+   display: inline-block;
+   padding: 15px 30px;
+   color:black;
+   background-color: palevioletred;
+}
+#precios{
+   margin-top: 500px;
+   margin-bottom: 500px;
+   border: solid grey 2px;
+   font-size: 50px;
+
 }
 
 /*promociones*/
