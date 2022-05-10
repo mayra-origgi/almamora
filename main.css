@@ -63,13 +63,46 @@ body{
 
 }
 img:hover{-webkit-filter: grayscale(1);
+   
+
+}
+/* transformacion*/
+main .animacion{
+   width: 300px;
+   height: 300px;
+   border: solid 3px black;
+   animation-name: fade-in;
+   animation-iteration-count: 2;
+   animation-timing-function: easy;
+   animation-duration: 0.5s;
+   
+}
+@keyframes fade-in{
+
+   0%{
+       
+       translate: y(80px);
+       transform: scale(2,1);
+   }
+
+   50%{
+     
+       translate: y(20px);
+       transform: scale(1,0.5);
+   }
+
+   100%{
+ 
+       translate: y(0px);
+       transform: scale(0.5,0);
+   }
+
 
 }
 /*animacion*/
 main{
     grid-area: main;
     margin-top: 30px;
-    min-width: 100vh;
     text-align: center;
 }
 footer{
@@ -90,6 +123,12 @@ footer .redes-1{
     display: flex;
     flex-direction: column;
 }
+img{
+   width: 20vh;
+   height: 20vh;
+   
+}
+
 
 /*fin clases similares*/
 
@@ -129,7 +168,18 @@ section .imagen-principal{
 justify-content: center;
    flex-direction: column;
 }
-
+table{
+   font-size: 10px;
+   width: 200px;
+   height: 200px;
+}
+.btn{
+   border-radius: 2px;
+   display: inline-block;
+   padding: 15px 30px;
+   color:black;
+   background-color: palevioletred;
+}
 
 
 /*menu de contacto*/
@@ -143,8 +193,8 @@ section iframe{
 
 /*media queries*/
 
-@media screen and (min-width :768px)
-{
+@media screen and (min-width :768px){
+
 /*clases similares*/
    .grids{
       
@@ -171,24 +221,32 @@ section iframe{
   align-self: flex-end;
  
  }
-
- #foot{
-    background-color: #727374;
-    text-align: center;
- }
-
+  .cuerpo{
+    
+    min-height: 1000px;
+    justify-content: space-between
+     
+  }
+  img{
+   width: 50vh;
+   height: 50vh;
+   
+}
+  .logo{
+     width: 100px;
+     height: 100px;
+  }
 /*menu*/
- .bienvenida{
+ #bienvenida{
     border: #4d4949 solid 2px;
-    justify-content: end;
+ 
  }
    
 #carouselExampleControls{
    width: 30%;
- margin-left: 600px;
+ 
 }
 
-}
 section .imagen-principal{
    width: 100%;
   
@@ -222,13 +280,11 @@ section .imagen-principal{
    font-size: 50px;
 
 }
-
-/*promociones*/
-.img-promo img{
-   width: 500px;
-   height: 500px;
-margin: 30px;
+ table{
+  
+   font-size: 35px;
 }
+
 
 main section{
    display: flex;
@@ -246,4 +302,20 @@ main section{
    -o-border-image: 100px;
    -ms-border-image:100px;
    margin: 70px;
+}
+
+/*promociones*/
+#promociones{
+   margin:0px;
+   padding: 0px;
+   width: 100%;
+  min-height: 100vh;
+}
+#promociones  footer{
+   
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+ 
+ }
 }
