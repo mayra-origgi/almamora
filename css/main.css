@@ -1,0 +1,206 @@
+/*reset css*/
+#servicios #quienes-somos #contacto #promo footer {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/*mobile first*/
+/*clases similares*/
+.grids {
+  display: grid;
+  grid-template-areas: "header header " "main main" "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+  margin: 15px 15px 15px 15px; }
+
+body {
+  background: linear-gradient(#f570c8, #f5b3f3, #f2c0f8, pink, #f4dff5);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.header {
+  grid-area: header;
+  display: flex;
+  background-color: #f1b8ea;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: dotted #4d4949 3px; }
+  .header li {
+    list-style-type: none;
+    font-size: 15px; }
+  .header li:hover {
+    width: 50px;
+    height: 30px;
+    font-size: 30px; }
+
+/*animacion*/
+.animacion:hover {
+  filter: grayscale(1); }
+
+img:hover {
+  filter: grayscale(1); }
+
+/* transformacion*/
+main .animacion {
+  width: 500px;
+  height: 500px;
+  border: solid 3px black;
+  animation-name: fade-in;
+  animation-iteration-count: 2;
+  animation-timing-function: easy;
+  animation-duration: 0.5s; }
+
+@keyframes fade-in {
+  0% {
+    translate: y(80px);
+    transform: scale(2, 1); }
+  50% {
+    translate: y(20px);
+    transform: scale(1, 0.5); }
+  100% {
+    translate: y(0px);
+    transform: scale(0.5, 0); } }
+
+/*animacion*/
+main {
+  grid-area: main;
+  margin-top: 30px; }
+
+footer {
+  display: flex;
+  grid-area: footer;
+  background-color: #727374;
+  font-size: 15px;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 15px 15px 15px 15px;
+  margin-right: 25px;
+  width: 100%; }
+  footer .redes-1 {
+    display: flex;
+    flex-direction: column; }
+
+img {
+  width: 20vh;
+  height: 20vh; }
+
+/*pagina principal */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  main p {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  main .imagen-principal {
+    width: 100%; }
+  main img {
+    width: 70vh;
+    height: 70vh; }
+  main iframe {
+    width: 100vh;
+    height: 70vh; }
+
+/*pagina servicios*/
+table {
+  font-size: 10px;
+  width: 200px;
+  height: 200px; }
+
+.btn {
+  border-radius: 2px;
+  display: inline-block;
+  padding: 15px 30px;
+  color: black;
+  background-color: palevioletred; }
+
+/*pagina de contacto*/
+section iframe {
+  width: 200px;
+  height: 200px; }
+
+/* Media Queries*/
+@media screen and (min-width: 768px) {
+  /*clases similares*/
+  .grids {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; }
+  .header {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%; }
+  footer {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    align-self: flex-end; }
+  .cuerpo {
+    min-height: 1000px;
+    justify-content: space-between; }
+  .logo {
+    width: 100px;
+    height: 100px; }
+  /*pagina principal*/
+  #carouselExampleControls {
+    width: 40%; }
+  #bienvenida {
+    border: #4d4949 solid 2px; }
+  /* servicio*/
+  .boton {
+    text-align: center;
+    padding-top: 100px; }
+  .btn {
+    border-radius: 2px;
+    display: inline-block;
+    padding: 15px 30px;
+    color: black;
+    background-color: palevioletred; }
+  #precios {
+    margin-top: 500px;
+    margin-bottom: 500px;
+    border: solid grey 2px;
+    font-size: 50px; }
+  table {
+    font-size: 35px; }
+  /*contacto*/
+  main .redes {
+    width: 200px;
+    height: 200px;
+    background: #f5b3f3;
+    border-radius: 50px;
+    border-image: 10px;
+    margin: 70px;
+    margin-top: 10vh; }
+  main .subtitulo {
+    border: solid 3px;
+    background-image: url(../public/portada.png);
+    height: 20vh;
+    margin-bottom: 30px;
+    text-align: center; }
+  main h1 {
+    padding-top: 8vh; }
+  main .ubicacion {
+    padding-top: 30vh; }
+  /*promociones*/
+  #promociones {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 150vh; }
+    #promociones footer {
+      bottom: 0;
+      width: 100%; }
+    #promociones .animacion {
+      margin-left: 50px; } }
